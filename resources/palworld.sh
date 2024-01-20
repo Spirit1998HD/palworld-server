@@ -10,17 +10,10 @@ GAMECONFIG_DIR=$INSTALL_DIR/Pal/Saved/Config/LinuxServer
 
 mkdir -p $GAMECONFIG_DIR
 
-if ! [ -f $GAMECONFIG_DIR/PalWorldSettings.ini ]; then
-    cp -f $INSTALL_DIR/DefaultPalWorldSettings.ini $GAMECONFIG_DIR/PalWorldSettings.ini
-    sed -i "s/;.*//g" $GAMECONFIG_DIR/PalWorldSettings.ini > /dev/null 2>&1
-    sed -i ':a;N;$!ba;s/\n//g' $GAMECONFIG_DIR/PalWorldSettings.ini > /dev/null 2>&1
-fi
-
-if ! [ -s $GAMECONFIG_DIR/PalWorldSettings.ini ]; then
-    cp -f $INSTALL_DIR/DefaultPalWorldSettings.ini $GAMECONFIG_DIR/PalWorldSettings.ini
-    sed -i "s/;.*//g" $GAMECONFIG_DIR/PalWorldSettings.ini > /dev/null 2>&1
-    sed -i ':a;N;$!ba;s/\n//g' $GAMECONFIG_DIR/PalWorldSettings.ini > /dev/null 2>&1
-fi
+rm -f $GAMECONFIG_DIR/PalWorldSettings.ini
+cp -f $INSTALL_DIR/DefaultPalWorldSettings.ini $GAMECONFIG_DIR/PalWorldSettings.ini
+sed -i "s/;.*//g" $GAMECONFIG_DIR/PalWorldSettings.ini > /dev/null 2>&1
+sed -i ':a;N;$!ba;s/\n//g' $GAMECONFIG_DIR/PalWorldSettings.ini > /dev/null 2>&1
 
 while IFS='=' read -r -d '' name value; do
     sed -i "s/$name=[^,()]*[)]/$name=$value)/g" $GAMECONFIG_DIR/PalWorldSettings.ini > /dev/null 2>&1
