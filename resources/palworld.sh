@@ -29,4 +29,4 @@ done < <(env -0)
 
 cd $INSTALL_DIR
 
-./PalServer.sh -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS
+./PalServer.sh -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS EpicApp=PalServer
