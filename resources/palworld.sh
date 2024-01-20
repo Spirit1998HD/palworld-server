@@ -6,7 +6,7 @@ cd /home/steam/steamcmd
 
 ./steamcmd.sh +force_install_dir $INSTALL_DIR +login anonymous +app_update 2394010 +quit
 
-GAMECONFIG_DIR=$INSTALL_DIR/PalServer/Pal/Saved/Config/LinuxServer
+GAMECONFIG_DIR=$INSTALL_DIR/Pal/Saved/Config/LinuxServer
 
 mkdir -p $GAMECONFIG_DIR
 
