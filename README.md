@@ -4,6 +4,7 @@ This is an unofficial Docker container to let you host a dedicated [Palworld](ht
 You have the possibility to change every config option simply via enviroment varible.
 
 > [!WARNING]
+> 
 > Players from **Xbox PC/Console** will **not** be able to join a dedicated server. [^1]
 
 ## How to use
@@ -36,11 +37,13 @@ You have the possibility to change every config option simply via enviroment var
 5. Start the compose script. All game file will now be saved in the folder you created in step 1
 
 > [!IMPORTANT]
+> 
 > `'` -> let the container know it's a string
 > 
 > `"` -> to save the string in the config (without it the variabnle in the config would get reconized as a string)
 
 > [!Tip]
+> 
 > `PalWorldSettings.ini` can be edited but will be overwritten on every restart
 
 ## Enviroment variables
@@ -87,6 +90,7 @@ You can simply add these in the docker compose file.
 | RCONPort                           | Port number for RCON                             | 25575                     |
 
 > [!NOTE]
+> 
 > Currently the game has a bug where you can't properly connect to the server via password.
 
 ## Ports
