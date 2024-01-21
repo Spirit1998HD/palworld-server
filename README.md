@@ -1,7 +1,7 @@
 # Palworld Server
 
 This is an unofficial Docker container to let you host a dedicated [Palworld](https://store.steampowered.com/app/1623730/Palworld/) server.
-You have the possibility to change every config option simply via enviroment varible.
+You have the possibility to change every config option simply via environment variable.
 
 > [!WARNING]
 > 
