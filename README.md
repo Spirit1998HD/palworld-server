@@ -10,7 +10,7 @@ You have the possibility to change every config option simply via enviroment var
 ## How to use
 
 1. Create a folder on your machine where later the server should be saved in (e.g. `/home/example/palworld-server`)
-2. The folder has have the following permissons: User ID 1000 und Group ID 1000 (use `chown -R 1000:1000 /home/example/palworld-server`)
+2. The folder has to have the following permissons: User ID 1000 und Group ID 1000 (use `chown -R 1000:1000 /home/example/palworld-server`)
 3. Create a docker compose file
    
     ```yaml
