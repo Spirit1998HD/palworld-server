@@ -26,7 +26,7 @@ You have the possibility to change every config option simply via environment va
           ServerDescription: '"YourServerDescription"'
           ServerPassword: '"YourPassword"'
           AdminPassword: '"YourAdminPassword"'
-          restart: unless-stopped
+        restart: unless-stopped
         volumes:
           - type: bind
             source: /home/example/palworld-server
