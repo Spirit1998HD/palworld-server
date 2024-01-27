@@ -1,5 +1,10 @@
 # Palworld Server
 
+[![Static Badge](https://img.shields.io/badge/Github-2B3137?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPHBhdGggZD0iTTI2IDNhMSAxIDAgMCAwLS4xIDBIMjBhMSAxIDAgMSAwIDAgMmgzLjZMMTMuMyAxNS4zYTEgMSAwIDEgMCAxLjQgMS40TDI1IDYuNFYxMGExIDEgMCAxIDAgMiAwVjQuMUExIDEgMCAwIDAgMjYgM3pNNiA3QzUgNyA0IDggNCA5djE1YzAgMSAxIDIgMiAyaDE1YzEgMCAyLTEgMi0yVjExLjRsLTIgMlYyNEg2VjloMTAuNmwyLTJINnoiIGZpbGw9IiNmZmYiLz48L3N2Zz4%3D&labelColor=%233e464f)
+](https://github.com/Spirit1998HD/palworld-server)
+[![Static Badge](https://img.shields.io/badge/Docker-1D67ED?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPHBhdGggZD0iTTI2IDNhMSAxIDAgMCAwLS4xIDBIMjBhMSAxIDAgMSAwIDAgMmgzLjZMMTMuMyAxNS4zYTEgMSAwIDEgMCAxLjQgMS40TDI1IDYuNFYxMGExIDEgMCAxIDAgMiAwVjQuMUExIDEgMCAwIDAgMjYgM3pNNiA3QzUgNyA0IDggNCA5djE1YzAgMSAxIDIgMiAyaDE1YzEgMCAyLTEgMi0yVjExLjRsLTIgMlYyNEg2VjloMTAuNmwyLTJINnoiIGZpbGw9IiNmZmYiLz48L3N2Zz4%3D&labelColor=%23184ead)
+](https://hub.docker.com/r/spirit1998hd/palworld-server)
+
 This is an unofficial Docker container to let you host a dedicated [Palworld](https://store.steampowered.com/app/1623730/Palworld/) server.
 You have the possibility to change every config option simply via environment variable.
 
@@ -89,15 +94,18 @@ You can simply add these in the docker compose file.
 | RCONEnabled                        | Enable RCON                                      | False                     |
 | RCONPort                           | Port number for RCON                             | 25575                     |
 
-> [!NOTE]
-> 
-> Currently the game has a bug where you can't properly connect to the server via password.
-
 ## Ports
 
 | Port  | Description                                                 |
 | ----- | ----------------------------------------------------------- |
 | 8211  | Default Game Port (also used for direct connection)         |
 | 25575 | Default RCON Port (disabled by default) |
+
+## FAQ
+
+<dl>
+  <dt>How to start a second server on the same machine?</dt>
+  <dd>Just change the ports of your container for the server in the compose file. By default it would be 8211 but you can change it to something like 8212. Don't forget to also port forward the new port.</dd>
+</dl>
 
 [^1]: Xbox players can only join by invite code (max 4 players). That also counts for players who bought the game in the Microsoft Store.
